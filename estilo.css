@@ -1,0 +1,405 @@
+* {
+    margin: 0; 
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    /* background-color: red;  */
+}
+
+/* Navegación */
+nav { 
+    position: fixed;
+    z-index: 1000;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 255, 255); 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.contenedor-logo {
+    width: max-content;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(255, 255, 255); 
+}
+
+.logo {
+    margin: auto;
+    padding: 10px;
+    max-width:100px;
+    height: auto;
+    background-color:transparent; 
+}
+
+.colegio {
+    margin: 0;
+    color: #383845;
+    text-align: center;
+    height: fit-content;
+    font-size: 2vmin;
+    background-color:transparent; 
+}
+.nombre-col
+{
+    color: hwb(220 0% 11%);
+    background-color: rgb(255, 255, 255); 
+}
+.menu {   
+    display: flex;
+    background-color:transparent; 
+}
+
+.menu-items {
+    list-style: none;
+    margin: 10px;
+    background-color:transparent; 
+}
+
+.items {
+    position: relative;
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+    transition: color 0.5s ease;
+    border-bottom: 10px;
+    transition: color 0.5s ease-in-out;
+    background-color:transparent; 
+}
+
+.menu .menu-items .items:hover {
+    color: rgb(35, 35, 221);
+    border-bottom: 10px;
+    border-color: rgb(35, 35, 221); 
+}
+
+/* Línea debajo del menú */
+.menu .menu-items .items::after {
+    content: "";
+    left: 0;
+    bottom: -20px;
+    height: 6px;
+    width: 0%;
+    position: absolute;
+    border-radius: 3px;
+    transition: width 0.7s ease-in-out;
+}
+
+.menu .menu-items .items:hover::after {
+    width: 100%;
+    background-color: rgb(35, 35, 221); 
+}
+
+/* Contenedor después del menú */
+.Bloquevid {   
+    top: 80px; /* Ajusta el margen superior para evitar que se monte con el menú */
+    position: relative;
+    background-color: hwb(220 0% 11%);
+    height: auto;
+    width: 100%; 
+}
+.educamos {
+    position: absolute;
+    top: 45%; /* Centra verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+    width:  70%;
+    /* background-color: red; */
+}
+
+.botoncupo {
+    height: 35px;
+    width: 100px;
+    font-size: large;
+    background-color: hwb(220 0% 11%);
+    color: white;
+    border-style: none;
+    border-radius: 7px;
+    transition: background-color 1s ease-in-out, box-shadow 0.7s ease-in-out, color 0.7s ease-in-out; 
+}
+
+.botoncupo:hover {
+    color: #000000;
+    background-color: rgb(251, 255, 10);
+    box-shadow: 0 0 20px rgba(251, 255, 10, 0.8), 0 0 40px rgba(251, 255, 10, 0.6); 
+    cursor: pointer;
+}
+
+.texvid {
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+    background-color: #004be25e;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.parrafovid {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.vid {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    width: 100%;
+    filter: brightness(20%);
+    z-index: 0;
+}
+
+
+/* codigo bloque 1 */
+.Bloque1 {  
+    margin: 80px 0px 0px 0px; 
+    background-color: hwb(220 0% 11%);
+    height: 100%;
+    width: 100%; 
+    padding: 20px;
+    padding-top: 70px;
+    padding-bottom: 90px;
+    display: grid;
+    grid-column: 1fr;
+    grid-row: auto auto;
+    gap: 40px;
+    text-align: center;
+    
+}
+.cartillas
+{
+    background-color: #e4e5e7; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    gap: 20px;
+    padding: 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.cartillas:hover
+{
+    border: 1px solid white; 
+    box-sizing: border-box;
+    transition: all 1s ease;
+    transform: scale(1.09); 
+    background: linear-gradient( rgba(255, 255, 255, 0) 70% , rgba(251, 255, 10,1)100%);  
+}
+.cartillas:not(:hover)
+{
+    transition: all 1s ease; 
+    transform: scale(1); 
+}
+
+.cartillas:hover .titulo-cartillas {color:  rgba(251, 255, 10,1);} 
+.cartillas:hover .parrafo-cartillas { color: white;}
+.titulo-cartillas
+{
+   color: rgb(16, 96, 255); 
+   font-weight:bold;
+   font-size:x-large;
+   
+}
+.parrafo-cartillas
+{
+    text-align: justify;
+    color: rgb(38, 38, 44);
+}
+.imagen-cartillas
+{
+    max-width: 100%; 
+    height: auto; 
+    justify-self: flex-end; 
+    align-self: center; 
+   
+}
+
+
+
+
+
+
+
+/* codigo bloque 2 */
+.Bloque2 {  
+    background-color: hwb(220 0% 77%);
+    height: 100%;
+    width: 100%; 
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns:1fr;  
+    grid-template-rows:  auto auto; 
+    gap: 60px;
+    text-align: center;
+    align-items: center;
+}
+
+.titulo-bachillerato
+{
+    font-size:4vw;
+    color: #ececec ;
+    grid-column: 1 / -1
+}
+.contenedor-cartillas-bach
+{
+    display: grid; 
+    grid-template-columns:  repeat(auto-fit, minmax(250px, 2fr));
+    gap: 40px; 
+    justify-items: center; 
+    align-items: center; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cartillas-bach
+{
+    background: linear-gradient( rgba(0, 20, 59,1) 0%, rgba(16, 96, 255,1)80%); 
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center; 
+    border: 1px solid  rgba(16, 96, 255,1);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    align-items:center;
+    justify-content: flex-start;
+    
+} 
+.cartillas-bach:hover
+{
+    transition: all 1s ease;
+    transform: scale(1.2); 
+    color:rgba(16, 96, 255,1) ;
+    box-shadow: 0 0 20px rgb(0, 85, 255), 0 0 40px rgb(0, 85, 255);
+    z-index: 1;
+}
+.cartillas-bach:not(:hover)
+{
+    transition: all 1s ease; 
+    transform: scale(1); 
+}
+.titulo-cartillas-bach
+{
+    aspect-ratio: 10;
+    margin: 20px;
+    flex: 1;
+    color: rgb(251, 255, 10);
+    font-weight:bold;
+    font-size:x-large;
+   
+}
+.cartillas-bach:hover .titulo-cartillas-bach
+{
+    color:rgb(0, 85, 255);
+    transition: all 1s ease;
+} 
+.parrafo-cartillas-bach
+{
+    padding: 20px;
+    flex: 1;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+.imagen-bach
+{
+    flex: 1;
+    height:100%;
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+    border-bottom-right-radius: 40px;
+    border-bottom-Left-radius: 40px;
+    padding: 0%;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1080px)
+{
+    .texvid
+    {   
+        font-size: 5vw;  
+    }
+    .parrafovid
+    {
+    
+    }
+    .Bloque1
+    {   
+       flex-direction: row;
+    }
+} 
+
+@media (min-width: 200px)
+{
+    .texvid
+    {
+      
+        font-size: 4vw;      
+       
+    }
+    .parrafovid
+    {
+            
+    } 
+
+    nav
+    { 
+    
+    /* grid-template-columns: 1fr  3fr; */
+    
+    }
+    .Bloque1
+    {   
+      
+    }
+    
+    .cartillas
+    {
+        
+    }
+}
