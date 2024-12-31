@@ -1,9 +1,10 @@
-* {
+*
+{
     margin: 0; 
     padding: 0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    /* background-color: red;  */
+    background-color: transparent;  
 }
 
 /* Navegación */
@@ -11,8 +12,8 @@ nav {
     position: fixed;
     z-index: 1000;
     height: 100px;
-    width: 100%;
-    background-color: rgb(255, 255, 255); 
+    width:100%;
+    background-color: rgb(235, 235, 235); 
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -26,7 +27,7 @@ nav {
     grid-template-columns: 1fr 3fr;
     align-items: center;
     justify-items: center;
-    background-color: rgb(255, 255, 255); 
+    background-color: transparent; 
 }
 
 .logo {
@@ -36,7 +37,6 @@ nav {
     height: auto;
     background-color:transparent; 
 }
-
 .colegio {
     margin: 0;
     color: #383845;
@@ -48,7 +48,7 @@ nav {
 .nombre-col
 {
     color: hwb(220 0% 11%);
-    background-color: rgb(255, 255, 255); 
+    background-color:transparent; 
 }
 .menu {   
     display: flex;
@@ -148,7 +148,8 @@ nav {
     border-radius: 10px;
 }
 
-.parrafovid {
+.parrafovid 
+{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     font-size: 1rem;
@@ -168,7 +169,7 @@ nav {
 
 
 /* codigo bloque 1 */
-.Bloque1 {  
+ .Bloque1 {  
     margin: 80px 0px 0px 0px; 
     background-color: hwb(220 0% 11%);
     height: 100%;
@@ -181,25 +182,23 @@ nav {
     grid-row: auto auto;
     gap: 40px;
     text-align: center;
-    
 }
+
 .cartillas
 {
     background-color: #e4e5e7; 
-    height: 100%;
+    height:auto;
     display: flex;
     flex-direction: column;
     border-radius: 40px;
     gap: 20px;
     padding: 30px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
 }
 
 .cartillas:hover
 {
     border: 1px solid white; 
-    box-sizing: border-box;
     transition: all 1s ease;
     transform: scale(1.09); 
     background: linear-gradient( rgba(255, 255, 255, 0) 70% , rgba(251, 255, 10,1)100%);  
@@ -231,7 +230,7 @@ nav {
     justify-self: flex-end; 
     align-self: center; 
    
-}
+} 
 
 
 
@@ -264,7 +263,7 @@ nav {
 .contenedor-cartillas-bach
 {
     display: grid; 
-    grid-template-columns:  repeat(auto-fit, minmax(250px, 2fr));
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 2fr));
     gap: 40px; 
     justify-items: center; 
     align-items: center; 
@@ -303,13 +302,9 @@ nav {
 }
 .titulo-cartillas-bach
 {
-    aspect-ratio: 10;
     margin: 20px;
     flex: 1;
-    color: rgb(251, 255, 10);
-    font-weight:bold;
-    font-size:x-large;
-   
+    color: rgb(251, 255, 10); 
 }
 .cartillas-bach:hover .titulo-cartillas-bach
 {
@@ -334,7 +329,7 @@ nav {
     border-bottom-Left-radius: 40px;
     padding: 0%;
     bottom: 0;
-}
+} 
 
 
 
@@ -374,8 +369,9 @@ nav {
     }
 } 
 
-@media (min-width: 200px)
+@media (max-width: 600px)
 {
+   
     .texvid
     {
       
@@ -384,7 +380,7 @@ nav {
     }
     .parrafovid
     {
-            
+         font-size: 10px;
     } 
 
     nav
