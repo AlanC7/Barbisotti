@@ -399,6 +399,7 @@ nav {
     .Bloque1{ gap: 15px;}
     .contenedor-cartillas-bach{ max-width: 100%;}
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
+    .logo{max-width: 5rem;}
     .contenedor-menu{ justify-content: center;}
     .menu{ display: none; flex-direction: column; position: relative; background-color: transparent; /*visibility: hidden;*/}
     .items{text-align: center;}
@@ -419,6 +420,7 @@ nav {
     .boton-menu{display:block;}
     .colegio>h5{font-size: .5em;}
     .nombre-col{font-size: 2vmin;}
+
 }
 
 /* Estilos para pantallas de escritorio pequeñas */
