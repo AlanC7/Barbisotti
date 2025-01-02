@@ -373,13 +373,13 @@ nav {
 
 
 /* Estilos para móviles pequeños */
-@media (max-width: 480px) 
+@media (min-width:350px) and (max-width: 480px) 
 {
     /* .menu{ display: flex; flex-direction: column;} */
     .Bloque1{margin: 68px 0px 0px 0px; }
     .Bloquevid{ top: 68px; }
     .colegio>h5{font-size: .8em;}
-    .nombre-col{font-size: 1.8em;}
+    .nombre-col{font-size: 1.75em;}
     .parrafovid{font-size: 5px;}
     .educamos{gap: 1px;}
     nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(10px, 1fr));}
