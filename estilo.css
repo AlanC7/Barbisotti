@@ -188,10 +188,9 @@ nav {
     margin: 94px 0px 0px 0px; 
     background-color: hwb(220 0% 11%);
     height: 100%;
-    width: 100%; 
-    padding: 20px;
+    width: 100%;    
     padding-top: 40px;
-    padding-bottom: 90px;
+    padding-bottom: 40px;
     display: grid;
     grid-column: 1fr;
     grid-row: auto auto;
@@ -275,7 +274,7 @@ nav {
 }
 .contenedor-cartillas-bach
 {
-    margin: 0 20px 0 20px;
+    /* margin: 0 20px 0 20px; */
     padding: 30px;
     /* background-color: #000000; */
     display: grid; 
@@ -358,7 +357,7 @@ nav {
 
 
 /* Estilos para móviles pequeños */
-@media (max-width: 280px) 
+@media (max-width: 480px) 
 {
     /* .menu{ display: flex; flex-direction: column;} */
     .colegio>h5{font-size: 0.2em;}
@@ -368,6 +367,8 @@ nav {
 /* Estilos para móviles medianos */
 @media (min-width: 481px) and (max-width: 767px) 
 {
+    .Bloque1{ gap: 15px;}
+    .contenedor-cartillas-bach{ max-width: 100%;}
     nav{place-content: center;}
     .menu{ display: flex; flex-direction: column; position: relative; background-color: transparent; /*visibility: hidden;*/}
     .items{text-align: center;}
