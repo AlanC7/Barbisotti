@@ -45,7 +45,7 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     /* justify-content: start; */
-    background-color: #03001b;
+    /* background-color: #03001b; */
     height: 100%;
     width: 100%;
     align-items: center;
@@ -54,11 +54,16 @@ nav {
 .boton-menu
 { 
     display: none;
-    height: 40px;
-    width: 50px;
-    background-color:rgb(35, 35, 221);
-    color: white;
+    /* background-color:rgb(35, 35, 221); */
     /* visibility: hidden; */
+}
+.contenedor-menu > i
+{
+    padding: 3px;
+    /* background-color:red ; */
+    color: rgb(68, 68, 68);
+    font-size: 2rem;
+    cursor: pointer;
 }
 .colegio {
     display: flex;
