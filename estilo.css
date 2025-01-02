@@ -6,7 +6,6 @@
     box-sizing: border-box;
     background-color: transparent;  
 }
-header{position: relative; }
 /* Navegación */
 nav { 
     width:100%;
@@ -40,13 +39,14 @@ nav {
 }
 .contenedor-menu
 {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    place-content: centers;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .boton-menu
 { 
-    height: 30px;
+    height: auto;
     width: 50px;
     background-color: #9e3a3a;
     color: white;
@@ -63,7 +63,8 @@ nav {
 .nombre-col
 {
     color: hwb(220 0% 11%);
-    background-color:transparent; 
+    /* background-color:transparent;  */
+    background-color:red; 
 }
 .menu {   
     display: flex;
@@ -360,8 +361,13 @@ nav {
 @media (max-width: 480px) 
 {
     /* .menu{ display: flex; flex-direction: column;} */
-    .colegio>h5{font-size: 0.2em;}
-    .nombre-col{font-size: 1em;}
+    .colegio>h5{font-size: .8em;}
+    .nombre-col{font-size: 1.8em;}
+    .parrafovid{display: none;}
+    nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(10px, 1fr));}
+    .logo { padding: 3px;max-width:3rem;height: auto;}
+    .boton-menu{display: block; width: 30px;  height:auto}
+    .menu{display:none;}
 }
 
 /* Estilos para móviles medianos */
@@ -369,7 +375,8 @@ nav {
 {
     .Bloque1{ gap: 15px;}
     .contenedor-cartillas-bach{ max-width: 100%;}
-    nav{place-content: center;}
+    nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));}
+    .contenedor-menu{}
     .menu{ display: flex; flex-direction: column; position: relative; background-color: transparent; /*visibility: hidden;*/}
     .items{text-align: center;}
     .texvid{ font-size: 4vw; }
