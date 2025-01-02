@@ -6,36 +6,51 @@
     box-sizing: border-box;
     background-color: transparent;  
 }
-
+header{position: relative; }
 /* Navegación */
 nav { 
+    width:100%;
     position: fixed;
     z-index: 1000;
-    height: 100px;
-    width:100%;
-    background-color: rgb(235, 235, 235); 
+    height: auto;
+    padding: 10px;
+    background-color:rgb(235, 234, 234); 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    gap: 20px;
+    align-items: center; 
+    justify-items: center; 
+    place-content: center;
 }
 
 .contenedor-logo {
     width: max-content;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr;
     align-items: center;
-    justify-items: center;
     background-color: transparent; 
 }
 
 .logo {
-    margin: auto;
     padding: 10px;
-    max-width:100px;
+    max-width:6rem;
     height: auto;
     background-color:transparent; 
+}
+.contenedor-menu
+{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    place-content: centers;
+}
+.boton-menu
+{ 
+    height: 30px;
+    width: 50px;
+    background-color: #9e3a3a;
+    color: white;
+    /* visibility: hidden; */
 }
 .colegio {
     margin: 0;
@@ -96,7 +111,7 @@ nav {
 
 /* Contenedor después del menú */
 .Bloquevid {   
-    top: 80px; /* Ajusta el margen superior para evitar que se monte con el menú */
+    top: 94px; /* Ajusta el margen superior para evitar que se monte con el menú */
     position: relative;
     background-color: hwb(220 0% 11%);
     height: auto;
@@ -170,12 +185,12 @@ nav {
 
 /* codigo bloque 1 */
  .Bloque1 {  
-    margin: 80px 0px 0px 0px; 
+    margin: 94px 0px 0px 0px; 
     background-color: hwb(220 0% 11%);
     height: 100%;
     width: 100%; 
     padding: 20px;
-    padding-top: 70px;
+    padding-top: 40px;
     padding-bottom: 90px;
     display: grid;
     grid-column: 1fr;
@@ -243,13 +258,11 @@ nav {
     background-color: hwb(220 0% 77%);
     height: 100%;
     width: 100%; 
-    padding: 20px;
     padding-top: 50px;
     padding-bottom: 60px;
     display: grid;
     grid-template-columns:1fr;  
     grid-template-rows:  auto auto; 
-    gap: 60px;
     text-align: center;
     align-items: center;
 }
@@ -262,9 +275,12 @@ nav {
 }
 .contenedor-cartillas-bach
 {
+    margin: 0 20px 0 20px;
+    padding: 30px;
+    /* background-color: #000000; */
     display: grid; 
-    grid-template-columns:  repeat(auto-fit, minmax(300px, 2fr));
-    gap: 40px; 
+    grid-template-columns:  repeat(auto-fit, minmax(300px,auto));
+    gap: 30px; 
     justify-items: center; 
     align-items: center; 
     padding-left: 20px;
@@ -274,12 +290,11 @@ nav {
 .cartillas-bach
 {
     background: linear-gradient( rgba(0, 20, 59,1) 0%, rgba(16, 96, 255,1)80%); 
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: 650px;
     border-radius: 40px;
     display:flex;
     flex-direction: column;
-    gap: 30px;
     text-align: center; 
     border: 1px solid  rgba(16, 96, 255,1);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
@@ -290,7 +305,7 @@ nav {
 .cartillas-bach:hover
 {
     transition: all 1s ease;
-    transform: scale(1.2); 
+    transform: scale(1.1); 
     color:rgba(16, 96, 255,1) ;
     box-shadow: 0 0 20px rgb(0, 85, 255), 0 0 40px rgb(0, 85, 255);
     z-index: 1;
@@ -342,60 +357,52 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width:1080px)
+/* Estilos para móviles pequeños */
+@media (max-width: 280px) 
 {
-    .texvid
-    {   
-        font-size: 5vw;  
-    }
-    .parrafovid
-    {
-    
-    }
-    .Bloque1
-    {   
-       flex-direction: row;
-    }
-} 
-
-@media (max-width: 600px)
-{
-   
-    .texvid
-    {
-      
-        font-size: 4vw;      
-       
-    }
-    .parrafovid
-    {
-         font-size: 10px;
-    } 
-
-    nav
-    { 
-    
-    /* grid-template-columns: 1fr  3fr; */
-    
-    }
-    .Bloque1
-    {   
-      
-    }
-    
-    .cartillas
-    {
-        
-    }
+    /* .menu{ display: flex; flex-direction: column;} */
+    .colegio>h5{font-size: 0.2em;}
+    .nombre-col{font-size: 1em;}
 }
+
+/* Estilos para móviles medianos */
+@media (min-width: 481px) and (max-width: 767px) 
+{
+    nav{place-content: center;}
+    .menu{ display: flex; flex-direction: column; position: relative; background-color: transparent; /*visibility: hidden;*/}
+    .items{text-align: center;}
+    .texvid{ font-size: 4vw; }
+    .parrafovid{font-size: 10px;} 
+    .colegio>h5{font-size: 1.1em;}
+    .nombre-col{font-size: 2.2em;}
+    .boton-menu{visibility:visible; align-items: center; justify-content: center;}
+    .titulo-bachillerato{font-size:8vw;}
+
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+/* Estilos para pantallas de escritorio pequeñas */
+@media (min-width: 1025px) and (max-width: 1280px) {
+   
+}
+
+/* Estilos para pantallas de escritorio grandes */
+@media (min-width: 1281px) {
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
