@@ -58,6 +58,7 @@ nav {
     display: none;
     font-size:x-large;
     text-align: center;
+    z-index: 101;
 }
 /* .contenedor-menu > i
 {
@@ -378,7 +379,7 @@ nav {
 
 
 
-.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex;}
+.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; will-change: transform; z-index: 101;}
 .visiblemenu{display:flex; flex-direction: column; position: relative; align-items: end; }
 .novisiblemenu{display: none; flex-direction: column; position: relative; align-items: end; }
 
