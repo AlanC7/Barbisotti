@@ -63,7 +63,7 @@ window.addEventListener("resize", () => {
         boton.classList.remove('bi-x-circle-fill');
         boton.classList.add('bi-list');
     } else {
-        // lista.style.display = "none";
+        lista.style.display = "none";
     }
 });
 
