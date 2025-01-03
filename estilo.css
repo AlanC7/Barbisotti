@@ -5,6 +5,7 @@
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     background-color:transparent;  
+   
 }
 /* Navegación */
 nav { 
@@ -13,7 +14,7 @@ nav {
     z-index: 100;
     height: 100px;
     padding: 10px;
-    background-color:rgb(235, 234, 234);  
+    background-color:rgb(219, 219, 219);  
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     /* grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)); */
@@ -24,7 +25,6 @@ nav {
     box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.2);
     /* background-color: #78eb94;  */
 }
-
 .contenedor-logo {
     width: auto;
     height: 100%;
@@ -41,37 +41,6 @@ nav {
     background-color:transparent; 
     justify-self: center;
 }
-.contenedor-menu
-{
-    display: flex;
-    flex-wrap: wrap;
-    align-items:flex-start;
-    /* justify-content: start; */
-    /* background-color: #03001b; */
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-.boton-menu
-{ 
-    display: none;
-    font-size:x-large;
-    text-align: center;
-    z-index: 101;
-}
-/* .contenedor-menu > i
-{
-    padding: 3px;
-    background-color:transparent; 
-    color: rgb(133, 133, 133);
-    font-size: 2rem;
-    cursor: pointer;
-} */
-.contenedor-menu > i:active{
-    color: rgb(223, 58, 58);
-}
-
 .colegio {
     display: flex;
     flex-direction: column;
@@ -92,10 +61,32 @@ nav {
     /* background-color:transparent;  */
     /* background-color:red;  */
 }
+.contenedor-menu
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    /* background-color: #03001b; */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.boton-menu
+{ 
+    display: none;
+    font-size:x-large;
+    text-align: center;
+    z-index: 101;
+}
+
+
 .menu {   
     display: flex;
     background-color:transparent;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-items {
@@ -109,10 +100,9 @@ nav {
     position: relative;
     color: rgb(92, 92, 92);
     text-decoration: none;
-    transition: color 0.5s ease;
-    border-bottom: 10px;
     transition: color 0.5s ease-in-out;
     background-color:transparent; 
+    
 }
 
 .menu .menu-items .items:hover {
@@ -125,7 +115,7 @@ nav {
 .menu .menu-items .items::after {
     content: "";
     left: 0;
-    bottom: -20px;
+    bottom: -10px;
     height: 6px;
     width: 0%;
     position: absolute;
@@ -136,6 +126,7 @@ nav {
 .menu .menu-items .items:hover::after {
     width: 100%;
     background-color: rgb(11, 94, 215); 
+    
 }
 
 /* Contenedor después del menú */
@@ -230,7 +221,7 @@ nav {
 .cartillas
 {
     background-color: #e4e5e7; 
-    height:auto;
+    height:650px;
     display: flex;
     flex-direction: column;
     border-radius: 40px;
@@ -288,11 +279,13 @@ nav {
     width: 100%; 
     padding-top: 50px;
     padding-bottom: 60px;
-    display: grid;
-    grid-template-columns:1fr;  
-    grid-template-rows:  auto auto; 
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns:1fr;  
+    grid-template-rows:  auto auto;  */
     text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
 .titulo-bachillerato
@@ -303,9 +296,9 @@ nav {
 }
 .contenedor-cartillas-bach
 {
-    /* margin: 0 20px 0 20px; */
+    width: auto;
     padding: 30px;
-    /* background-color: #000000; */
+    background-color: #000000; 
     display: grid; 
     grid-template-columns:  repeat(auto-fit, minmax(300px,auto));
     gap: 30px; 
@@ -318,7 +311,7 @@ nav {
 .cartillas-bach
 {
     background: linear-gradient( rgba(0, 20, 59,1) 0%, rgba(16, 96, 255,1)80%); 
-    width: fit-content;
+    width:auto;
     height: 650px;
     border-radius: 40px;
     display:flex;

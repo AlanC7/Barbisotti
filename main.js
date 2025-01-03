@@ -34,7 +34,7 @@ const contenedormenu = document.querySelector("#contemenu");
 const lista = document.querySelector("#menu");
 
 boton.addEventListener("click", () => {
-    contenedormenu.classList.toggle("visiblecontenedor"); 
+    contenedormenu.classList.toggle("visiblecontenedor");    
     if (lista.classList.contains("visiblemenu")) {
         lista.classList.remove("visiblemenu");
         lista.style.display = "none"; 
@@ -53,9 +53,9 @@ boton.addEventListener("click", () => {
     }
 });
 
-// Asegúrate de que el menú se muestre correctamente al cambiar el tamaño de la pantalla
+// elimino y agrego clases que necesito al cambiar el tamaño del viwport
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 1100) { // Ajusta el valor según tus necesidades
+    if (window.innerWidth >= 1100) { 
         lista.style.display = "flex";
         lista.style.flexDirection = "row";
         lista.classList.remove("visiblemenu");
@@ -76,7 +76,6 @@ window.addEventListener('load',()=>
         loader.style.opacity= '0%' 
         loader.style.transition= 'all 1s' 
         loader.style.visibility='hidden' 
-        
         var scrollbody=document.querySelector('#bodyscroll').classList.remove("ocultarScroll")
             
     })
