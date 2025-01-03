@@ -21,6 +21,8 @@ nav {
     align-items: center; 
     justify-items: center; 
     place-content: center;
+    box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.2);
+    
 }
 
 .contenedor-logo {
@@ -43,7 +45,7 @@ nav {
 {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items:flex-start;
     /* justify-content: start; */
     /* background-color: #03001b; */
     height: 100%;
@@ -101,7 +103,7 @@ nav {
 
 .items {
     position: relative;
-    color: rgb(136, 136, 136);
+    color: rgb(92, 92, 92);
     text-decoration: none;
     transition: color 0.5s ease;
     border-bottom: 10px;
@@ -237,7 +239,7 @@ nav {
 {
     border: 1px solid white; 
     transition: all 1s ease;
-    transform: scale(1.09); 
+    transform: scale(1.05); 
     background: linear-gradient( rgba(255, 255, 255, 0) 70% , rgba(251, 255, 10,1)100%);  
 }
 .cartillas:not(:hover)
@@ -327,7 +329,7 @@ nav {
 .cartillas-bach:hover
 {
     transition: all 1s ease;
-    transform: scale(1.1); 
+    transform: scale(1.04); 
     color:rgba(16, 96, 255,1) ;
     box-shadow: 0 0 20px rgb(0, 85, 255), 0 0 40px rgb(0, 85, 255);
     z-index: 1;
@@ -373,10 +375,9 @@ nav {
 
 
 
-.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);
-    bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);}
-.visiblemenu{display:block; flex-direction: column; position: relative; align-items: end; z-index: 101;}
-
+.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911); bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex;}
+.visiblemenu{display:block; flex-direction: column; position: relative; align-items: end; }
+/* .novisiblemenu{display: none; flex-direction: column; position: relative; align-items: end; } */
 
 
 
@@ -394,9 +395,11 @@ nav {
     nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(10px, 1fr));}
     .logo { padding: 3px;max-width:3rem;height: auto;}
     .boton-menu{display: block; width: 30px;  height:auto}
-    /* .menu{display: none;}  este tengo que activarlo*/
+    /* .menu{display: none;}   */
 
-    
+    /* .visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);
+    bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);}
+    .visiblemenu{display:block; flex-direction: column; position: relative; align-items: end; z-index: 101;} */
     
 }
 
@@ -408,7 +411,7 @@ nav {
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
     .logo{max-width: 5rem;}
     .contenedor-menu{ justify-content: center;}
-    .menu{ display: none; flex-direction: column; position: relative; background-color: transparent; /*visibility: hidden;*/}
+    .menu{display: none; flex-direction: column; position: relative; background-color: transparent; /*visibility: hidden;*/}
     .items{text-align: center;}
     .texvid{ font-size: 4vw; }
     .parrafovid{font-size: 10px;} 
@@ -420,7 +423,7 @@ nav {
 
 /* Estilos para tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .menu{ display: none; position: relative; background-color: transparent; }
+    .menu{display: none; position: relative; background-color: transparent; }
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
     .contenedor-menu{align-items: center; justify-content: center;}
     .boton-menu{display:block;}
@@ -431,7 +434,7 @@ nav {
 
 /* Estilos para pantallas de escritorio pequeñas */
 @media (min-width: 1025px) and (max-width: 1100px) {
-    .menu{ display: none; position: relative; background-color: transparent; }
+    .menu{display: none; position: relative; background-color: transparent; }
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
     .contenedor-menu{align-items: center; justify-content: center;}
     .boton-menu{display:block;}
@@ -444,6 +447,7 @@ nav {
 /* Estilos para pantallas de escritorio grandes */
 @media (min-width: 1101px) {
     .colegio>h5{font-size: .7em;}
+    
    
 }
 
