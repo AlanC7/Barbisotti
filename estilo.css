@@ -298,7 +298,7 @@ nav {
 {
     width: auto;
     padding: 30px;
-    background-color: #000000; 
+    /* background-color: #000000;  */
     display: grid; 
     grid-template-columns:  repeat(auto-fit, minmax(300px,auto));
     gap: 30px; 
