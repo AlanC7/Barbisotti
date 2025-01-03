@@ -379,9 +379,9 @@ nav {
 
 
 
-.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; will-change: transform; z-index: 101;}
+.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; z-index: 101;}
 .visiblemenu{display:flex; flex-direction: column; position: relative; align-items: end; }
-.novisiblemenu{display: none; flex-direction: column; position: relative; align-items: end; }
+.novisiblemenu{display: none; flex-direction: column; position: relative; align-items: end; z-index: 101;}
 
 
 
