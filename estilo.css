@@ -94,7 +94,7 @@ nav {
 .menu {   
     display: flex;
     background-color:transparent;
-    
+    flex-direction: row;
 }
 
 .menu-items {
@@ -379,8 +379,8 @@ nav {
 
 
 .visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex;}
-.visiblemenu{display:block; flex-direction: column; position: relative; align-items: end; }
-/* .novisiblemenu{display: none; flex-direction: column; position: relative; align-items: end; } */
+.visiblemenu{display:flex; flex-direction: column; position: relative; align-items: end; }
+.novisiblemenu{display: none; flex-direction: column; position: relative; align-items: end; }
 
 
 
