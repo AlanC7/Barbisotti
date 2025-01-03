@@ -56,18 +56,21 @@ nav {
 .boton-menu
 { 
     display: none;
-    /* background-color:rgb(35, 35, 221); */
-    /* visibility: hidden; */
+    font-size:x-large;
+    text-align: center;
 }
-.contenedor-menu > i
+/* .contenedor-menu > i
 {
     padding: 3px;
-    /* background-color:red ; */
+    background-color:transparent; 
     color: rgb(133, 133, 133);
     font-size: 2rem;
     cursor: pointer;
+} */
+.contenedor-menu > i:active{
+    color: rgb(223, 58, 58);
 }
-.contenedor-menu > i:active{color: rgb(223, 58, 58);}
+
 .colegio {
     display: flex;
     flex-direction: column;
@@ -112,7 +115,7 @@ nav {
 }
 
 .menu .menu-items .items:hover {
-    color: rgb(35, 35, 221);
+    color: rgb(11, 94, 215);
     border-bottom: 10px;
     border-color: rgb(35, 35, 221); 
 }
@@ -131,7 +134,7 @@ nav {
 
 .menu .menu-items .items:hover::after {
     width: 100%;
-    background-color: rgb(35, 35, 221); 
+    background-color: rgb(11, 94, 215); 
 }
 
 /* Contenedor después del menú */
@@ -375,7 +378,7 @@ nav {
 
 
 
-.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911); bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex;}
+.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex;}
 .visiblemenu{display:block; flex-direction: column; position: relative; align-items: end; }
 /* .novisiblemenu{display: none; flex-direction: column; position: relative; align-items: end; } */
 
@@ -389,13 +392,14 @@ nav {
     .Bloque1{margin: 68px 0px 0px 0px; }
     .Bloquevid{ top: 68px; }
     .colegio>h5{font-size: .8em;}
-    .nombre-col{font-size: 1.75em;}
+    .nombre-col{font-size: 1.60em;}
     .parrafovid{font-size: 5px;}
+    .titulo-bachillerato{font-size:9vw;}
     .educamos{gap: 1px;}
     nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(10px, 1fr));}
     .logo { padding: 3px;max-width:3rem;height: auto;}
-    .boton-menu{display: block; width: 30px;  height:auto}
-    /* .menu{display: none;}   */
+    .boton-menu{display: block; width: auto;  height:auto}
+    .menu{display: none;}  
 
     /* .visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);
     bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);}
@@ -445,8 +449,9 @@ nav {
 }
 
 /* Estilos para pantallas de escritorio grandes */
-@media (min-width: 1101px) {
+@media (min-width: 1101px) and (max-width: 1900px){
     .colegio>h5{font-size: .7em;}
+    .menu{display: block;}
     
    
 }
