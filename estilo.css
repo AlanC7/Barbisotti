@@ -11,33 +11,33 @@ nav {
     width:100%;
     position: fixed;
     z-index: 100;
-    height: auto;
+    height: 100px;
     padding: 10px;
-    background-color:rgb(235, 234, 234); 
+    background-color:rgb(235, 234, 234);  
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     /* grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)); */
-    gap: 10px;
+    gap: 5px;
     align-items: center; 
     justify-items: center; 
     place-content: center;
     box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.2);
-    
+    /* background-color: #78eb94;  */
 }
 
 .contenedor-logo {
+    width: auto;
     height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     align-items: center;
     /* background-color: green;  */
+    padding: 4px;
 }
 
 .logo {
-    padding: 10px;
-    max-width:6rem;
+    width:5rem;
     height: auto;
+    object-fit: cover;
     background-color:transparent; 
     justify-self: center;
 }
@@ -75,19 +75,20 @@ nav {
 .colegio {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    gap: 10px;
     height: 100%;
     width: 100%;
     margin: 0;
     color: #383845;
     text-align: center;
-    font-size: 2vmin;
     /* background-color:maroon;  */
     text-align: center;
     justify-content: center;
 }
+.colegio>h5{ font-size: 2vmin;}
 .nombre-col
 {
+    .nombre-col{font-size: 2vmin;}
     color: hwb(220 0% 11%);
     /* background-color:transparent;  */
     /* background-color:red;  */
@@ -392,13 +393,13 @@ nav {
     /* .menu{ display: flex; flex-direction: column;} */
     .Bloque1{margin: 68px 0px 0px 0px; }
     .Bloquevid{ top: 68px; }
-    .colegio>h5{font-size: .8em;}
-    .nombre-col{font-size: 1.60em;}
+    .colegio>h5{font-size: 1.6vmin;}
+    .nombre-col{font-size: 3.3vmin;}
     .parrafovid{font-size: 5px;}
     .titulo-bachillerato{font-size:9vw;}
     .educamos{gap: 1px;}
-    nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(10px, 1fr));}
-    .logo { padding: 3px;max-width:3rem;height: auto;}
+    nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(10px, 1fr)); padding: 7px;}
+    .logo { padding: 0px;max-width:5rem;height: auto;}
     .boton-menu{display: block; width: auto;  height:auto}
     .menu{display: none;}  
 
@@ -413,15 +414,16 @@ nav {
 {
     .Bloque1{ gap: 15px;}
     .contenedor-cartillas-bach{ max-width: 100%;}
-    nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
-    .logo{max-width: 5rem;}
+    nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;padding: 5px;}
+    .contenedor-logo { max-width: 16vmin;}
+    .logo{max-width: 7rem;}
     .contenedor-menu{ justify-content: center;}
     .menu{display: none; flex-direction: column; position: relative; background-color: transparent; /*visibility: hidden;*/}
     .items{text-align: center;}
     .texvid{ font-size: 4vw; }
     .parrafovid{font-size: 10px;} 
-    .colegio>h5{font-size: .6em;}
-    .nombre-col{font-size: 1.2em;}
+    .colegio>h5{font-size: 1.3vmin;}
+    .nombre-col{font-size: 2.6vmin;}
     .boton-menu{display:block;}
     .titulo-bachillerato{font-size:8vw;}
 }
@@ -432,18 +434,19 @@ nav {
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
     .contenedor-menu{align-items: center; justify-content: center;}
     .boton-menu{display:block;}
-    .colegio>h5{font-size: .5em;}
-    .nombre-col{font-size: 2vmin;}
+    .colegio>h5{font-size: 1.3vmin;}
+    .nombre-col{font-size: 2.6vmin;}
 
 }
 
 /* Estilos para pantallas de escritorio pequeñas */
 @media (min-width: 1025px) and (max-width: 1100px) {
     .menu{display: none; position: relative; background-color: transparent; }
-    nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
+    nav{place-content: center; grid-template-columns: 1fr 1fr 1fr; }
     .contenedor-menu{align-items: center; justify-content: center;}
     .boton-menu{display:block;}
-    .colegio>h5{font-size: .8em;}
+    .colegio>h5{font-size: 1.2vmin;}
+    .nombre-col{font-size: 2.4vmin;}
     
    
     
@@ -451,8 +454,10 @@ nav {
 
 /* Estilos para pantallas de escritorio grandes */
 @media (min-width: 1101px) and (max-width: 1900px){
-    .colegio>h5{font-size: .7em;}
+    
     .menu{display: block;}
+    .colegio>h5{font-size: 1.5vmin;}
+    .nombre-col{font-size: 3vmin;}
     
    
 }
