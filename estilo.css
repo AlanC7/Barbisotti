@@ -10,12 +10,16 @@
 body{background-color:rgb(0, 76, 227) ;}
 main
 {
-    /* background-color: rgb(219, 219, 219); */
+    /* position: relative;
+    top:7px; */
+    /* background-color: rgb(219, 219, 219);  */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
-.Bloque1, .Bloque2{max-width: 1500px;}
+.Bloque1, .Bloque2, .bloque-carrusel{max-width: 1500px;}
 /* Navegación */
 nav { 
     width:100%;
@@ -140,11 +144,12 @@ nav {
 
 /* Contenedor después del menú */
 .Bloquevid {   
-    top: 94px; /* Ajusta el margen superior para evitar que se monte con el menú */
+    top: 94px; 
     position: relative;
     background-color: hwb(220 0% 11%);
     height: auto;
     width: 100%; 
+   
 }
 .educamos {
     position: absolute;
@@ -212,9 +217,20 @@ nav {
 }
 
 
+
+/* carrusel */
+.bloque-carrusel
+{margin: 94px 0px 0px 0px; padding: 50px; height: auto;  width: 100%;  }
+.bloque-carrusel img 
+{ 
+    border-radius: 20px;
+    width: 100%;
+    object-fit:contain;
+}
+
 /* codigo bloque 1 */
  .Bloque1 {  
-    margin: 94px 0px 0px 0px; 
+    /* margin: 94px 0px 0px 0px;  */
     background-color: hwb(220 0% 11%);
     height: auto;
     width: 100%;    
@@ -267,7 +283,8 @@ nav {
     border: 1px solid white; 
     transition: all 1s ease;
     transform: scale(1.05); 
-    background: linear-gradient( rgba(255, 255, 255, 0) 70% , rgb(255, 255, 255)100%);  
+    background-color: transparent;
+    /*background: linear-gradient( rgba(255, 255, 255, 0) 70% , rgb(255, 255, 255)100%);  */
 }
 .cartillas:not(:hover)
 {
@@ -304,15 +321,15 @@ nav {
 
 /* codigo bloque 2 */
 .Bloque2 {  
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     background-color: hwb(220 0% 77%);
     height: 100%;
     width: 100%; 
     padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    /* grid-template-columns:1fr;  
-    grid-template-rows:  auto auto;  */
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -330,8 +347,8 @@ nav {
     padding: 30px;
     /* background-color: #000000;  */
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px; 
     justify-items: center; 
     align-items: center; 
     padding-left: 20px;
@@ -404,7 +421,7 @@ nav {
 
 
 
-
+/* clases para la funcionalidad del boton */
 
 .visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; z-index: 101;}
 .visiblemenu{display:flex; flex-direction: column; position: relative; align-items: end; }
@@ -414,16 +431,15 @@ nav {
 
 
 /* Estilos para móviles pequeños */
-@media (min-width:350px) and (max-width: 480px) 
+@media (min-width:300px) and (max-width: 480px) 
 {
     /* .menu{ display: flex; flex-direction: column;} */
+    .bloque-carrusel{margin: 40px 0px 0px 0px; padding: 10px; }
     .Bloque1
     {
         gap:5px; 
-        margin: 68px 0px 0px 0px; 
         padding-top: 20px; 
         padding-bottom: 20px; 
-
         grid-template-rows: repeat(3, auto);
     }
     .Bloquevid{ top: 68px; }
@@ -446,20 +462,16 @@ nav {
         grid-template-rows: repeat(4, 1fr);
         gap: 10px;
     } 
-
-    /* .visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);
-    bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);}
-    .visiblemenu{display:block; flex-direction: column; position: relative; align-items: end; z-index: 101;} */
     
 }
 
 /* Estilos para móviles medianos */
 @media (min-width: 481px) and (max-width: 767px) 
 {
+    .bloque-carrusel{margin: 40px 0px 0px 0px; padding: 40px; }
     .Bloque1
     { 
         gap: 5px;
-        margin: 67px 0px 0px 0px;  
         padding-top: 20px; 
         padding-bottom: 20px;
         grid-template-rows: repeat(3, auto);
@@ -491,7 +503,7 @@ nav {
 
 /* Estilos para tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
-    
+    .bloque-carrusel{padding: 60px; }
     .menu{display: none; position: relative; background-color: transparent; }
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
     .contenedor-menu{align-items: center; justify-content: center;}
@@ -501,7 +513,7 @@ nav {
     .titulo-bachillerato{font-size:7vw;}
     .contenedor-cartillas
     {
-        padding: 10px;
+        padding: 20px;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
         gap: 20px;
@@ -510,6 +522,7 @@ nav {
 
 /* Estilos para pantallas de escritorio pequeñas */
 @media (min-width: 1025px) and (max-width: 1100px) {
+    .bloque-carrusel{padding: 80px; }
     .menu{display: none; position: relative; background-color: transparent; }
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr; }
     .contenedor-menu{align-items: center; justify-content: center;}
@@ -529,7 +542,7 @@ nav {
 
 /* Estilos para pantallas de escritorio grandes */
 @media (min-width: 1101px) and (max-width: 1900px){
-    
+    .bloque-carrusel{padding: 80px; height: auto; }
     .menu{display: block;}
     .colegio>h5{font-size: 1.5vmin;}
     .nombre-col{font-size: 3vmin;}
