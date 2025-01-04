@@ -7,6 +7,15 @@
     background-color:transparent;  
    
 }
+body{background-color:rgb(0, 76, 227) ;}
+main
+{
+    /* background-color: rgb(219, 219, 219); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Bloque1, .Bloque2{max-width: 1500px;}
 /* Navegación */
 nav { 
     width:100%;
@@ -207,26 +216,49 @@ nav {
  .Bloque1 {  
     margin: 94px 0px 0px 0px; 
     background-color: hwb(220 0% 11%);
-    height: 100%;
+    height: auto;
     width: 100%;    
     padding-top: 40px;
     padding-bottom: 40px;
     display: grid;
-    grid-column: 1fr;
-    grid-row: auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 20px;
     text-align: center;
 }
 .Bloque1:hover{transition: all 1s ease; }
+.contendedor-ilustracion
+{
+    padding: 20px; 
+    height: 100%; 
+    width: 1fr;
+    /* background-color: red;  */
+    grid-area: 2/1/4/3;}
+.ilustracion{object-fit: cover; width: 100%;border-radius: 20px; height: 100%;}
+.contenedor-cartillas
+{
+    padding: 20px;
+    grid-area: 2 / 3 / 3 / 5;
+    width: 1fr;
+    height: 100%;
+    /* background-color: #000000;  */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center; 
+    align-items: center; 
+}
 .cartillas
 {    
     background-color: #e4e5e7; 
+    width: 100%;
     height:100%;
     display: flex;
     flex-direction: column;
     border-radius: 40px;
-    gap: 20px;
-    padding: 30px;
+    gap: 5px;
+    padding: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -260,11 +292,8 @@ nav {
 .imagen-cartillas
 {
     border-radius: 20px;
-    max-width: 100%; 
-    height: 100%; 
-    justify-self: flex-end; 
-    align-self: center; 
-   
+    width: 100%;
+    object-fit:contain;
 } 
 
 
@@ -301,7 +330,7 @@ nav {
     padding: 30px;
     /* background-color: #000000;  */
     display: grid; 
-    grid-template-columns:  repeat(auto-fit, minmax(300px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
     gap: 30px; 
     justify-items: center; 
     align-items: center; 
@@ -313,7 +342,7 @@ nav {
 {
     background: linear-gradient( rgba(0, 20, 59,1) 0%, rgba(16, 96, 255,1)80%); 
     width:auto;
-    height: 600px;
+    height: 650px;
     border-radius: 40px;
     display:flex;
     flex-direction: column;
@@ -344,11 +373,12 @@ nav {
     height: auto;
     margin: 20px;
     /* flex: 1; */
-    color: rgb(251, 255, 10); 
+    color:rgb(0, 85, 255);
 }
 .cartillas-bach:hover .titulo-cartillas-bach
 {
-    color:rgb(0, 85, 255);
+    
+    color: rgb(251, 255, 10); 
     transition: all 1s ease;
 } 
 .parrafo-cartillas-bach
@@ -362,11 +392,10 @@ nav {
 .imagen-bach
 {
     /* background-color: red; */
-    flex: 1;
+    flex: 1; 
     height:100%;
     max-width: 100%;
-    align-self: center;
-    justify-self: flex-end;
+    object-fit:cover;
     border-bottom-right-radius: 40px;
     border-bottom-Left-radius: 40px;
     bottom: 0;
@@ -388,7 +417,15 @@ nav {
 @media (min-width:350px) and (max-width: 480px) 
 {
     /* .menu{ display: flex; flex-direction: column;} */
-    .Bloque1{gap:5px; margin: 68px 0px 0px 0px; padding-top: 20px; padding-bottom: 20px; }
+    .Bloque1
+    {
+        gap:5px; 
+        margin: 68px 0px 0px 0px; 
+        padding-top: 20px; 
+        padding-bottom: 20px; 
+
+        grid-template-rows: repeat(3, auto);
+    }
     .Bloquevid{ top: 68px; }
     .colegio {gap: 5px;}
     .colegio>h5{font-size: 1.6vmin;}
@@ -399,7 +436,16 @@ nav {
     nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(10px, 1fr)); padding: 5px; height: 80px;}
     .logo { padding: 5px;max-width:5rem;height: auto;}
     .boton-menu{display: block; width: auto;  height:auto}
-    .menu{display: none;}  
+    .menu{display: none;} 
+    .contendedor-ilustracion{ grid-area: 2 / 1 / 3 / 5;}
+    .contenedor-cartillas
+    {
+        grid-area: 3 / 1 / 4 / 5; 
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+    } 
 
     /* .visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);
     bottom: 0; height: auto; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);}
@@ -410,7 +456,14 @@ nav {
 /* Estilos para móviles medianos */
 @media (min-width: 481px) and (max-width: 767px) 
 {
-    .Bloque1{ gap: 5px;margin: 67px 0px 0px 0px;  padding-top: 20px; padding-bottom: 20px;}
+    .Bloque1
+    { 
+        gap: 5px;
+        margin: 67px 0px 0px 0px;  
+        padding-top: 20px; 
+        padding-bottom: 20px;
+        grid-template-rows: repeat(3, auto);
+    }
     .Bloquevid{ top: 70px; }
     .contenedor-cartillas-bach{ max-width: 100%;}
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;padding: 5px;height: 90px;}
@@ -425,10 +478,20 @@ nav {
     .nombre-col{font-size: 2.6vmin;}
     .boton-menu{display:block;}
     .titulo-bachillerato{font-size:8vw;}
+    .contendedor-ilustracion{ grid-area: 2 / 1 / 3 / 5;}
+    .contenedor-cartillas
+    {
+        grid-area: 3 / 1 / 4 / 5; 
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
 }
 
 /* Estilos para tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
+    
     .menu{display: none; position: relative; background-color: transparent; }
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;}
     .contenedor-menu{align-items: center; justify-content: center;}
@@ -436,6 +499,13 @@ nav {
     .colegio>h5{font-size: 1.3vmin;}
     .nombre-col{font-size: 2.6vmin;}
     .titulo-bachillerato{font-size:7vw;}
+    .contenedor-cartillas
+    {
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+    }
 }
 
 /* Estilos para pantallas de escritorio pequeñas */
@@ -447,7 +517,13 @@ nav {
     .colegio>h5{font-size: 1.2vmin;}
     .nombre-col{font-size: 2.4vmin;}
     .titulo-bachillerato{font-size:6vw;}
-   
+    .contenedor-cartillas
+    {
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+    }
     
 }
 
