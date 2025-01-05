@@ -44,7 +44,7 @@
             <div class="educamos">
                 <h1 class="texvid">Educamos para la vida</h1>
                 <p class="parrafovid"> Más que una institución, somos una comunidad comprometida con la excelencia, la innovación y los valores que transforman vidas. ¡Únete a nuestra familia educativa y construye un futuro brillante con nosotros!</p>
-                <button class="botoncupo">Contactar</button>
+                <button onclick="scrollToSection()" class="botoncupo">Contactar</button>
             </div>
 
             <video autoplay loop muted class="vid" src="recursos/video/Barbisotti.mp4"></video>
@@ -96,7 +96,7 @@
         <div class="Bloque1">
             <H2 class="titulo-bachillerato">Educación Básica</H2>
             <div class="contendedor-ilustracion">
-                <img class="ilustracion" src="recursos/imagenes/inicial.png" alt="">
+                <img class="ilustracion" src="recursos/imagenes/inicial.png" alt="" draggable="false">
             </div>
             <div class="contenedor-cartillas">
                 <div class="cartillas">
@@ -152,25 +152,25 @@
            
         </div>
       
-        <section>
+        <section id="contacto">
             <div class="formulario">
-                <h4>Formulario</h4>  
+                <h4>Formulario de Contacto</h4>  
 
                 <label for="nombre">Nombre</label>
                 <input id="nombre" class="texto" type="text" placeholder="Ingrese Nombre">
 
-                <label for="correo">Correo Electronico</label>
+                <label for="correo">Correo Electrónico</label>
                 <input id="correo" class="texto" type="email" placeholder="Ingrese Correo Electronico">
 
-                <label for="numero">Numero de teléfono</label>
+                <label for="numero">Número de teléfono</label>
                 <input id="numero" class="texto" type="number" placeholder="Ingrese Numero Celular">
 
                 <label for="asunto">Asunto</label>
                 <input id="asunto" class="texto" type="text" maxlength="30" placeholder="Ingrese Asunto">
 
-                <label for="mensaje">Dejede su mensaje</label>
-                <textarea id="mensaje" class="" name="" id="mensaje" placeholder="Ingrese Mensaje"></textarea>
-                <button class="btn btn-primary boton-enviar">Enviar</button>
+                <label for="mensaje">Deje su mensaje</label>
+                <textarea id="mensaje" class="" name="" maxlength="" placeholder="Ingrese Mensaje"></textarea>
+                <button class="btn btn-secondary boton-enviar">Enviar</button>
     
                 
             </div>   
@@ -180,7 +180,7 @@
         
     </main>
 
-    <footer>
+    <footer>    
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

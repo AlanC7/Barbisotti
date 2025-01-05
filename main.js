@@ -82,3 +82,18 @@ window.addEventListener('load',()=>
 
 
 
+
+  function scrollToSection() {
+    const section = document.getElementById('contacto');
+    const offset = 100; // Ajusta este valor según la altura de tu barra fija
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const sectionRect = section.getBoundingClientRect().top;
+    const sectionPosition = sectionRect - bodyRect;
+    const offsetPosition = sectionPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+

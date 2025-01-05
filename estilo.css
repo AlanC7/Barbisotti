@@ -318,69 +318,13 @@ nav {
     object-fit:contain;
 }  */
 
-/* formulario */
-section
-{
-    width: 100%; 
-    height: auto; 
-    margin-top: 20px;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #00000057;
-}
-section div h4
-{color:white; font-size: xx-large; text-align: center;}
-section div label{color: rgb(251, 255, 10) ;}
-section div textarea
-{
-    height: 300px;
-    padding: 5px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    border: none;
-    color:  rgb(0, 20, 59);
-    background-color: white;
-    width: 100%;
-}
-.formulario
-{
-    width: 50%;
-    height: auto;
-    /* background-color: red; */
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction:column;
-    gap: 5px;
-    
-}
 
-.texto
-{
-    padding: 5px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    border: none;
-    color:  rgb(0, 20, 59);
-    background-color: white;
-    height: auto;
-    width: 100%;
-   
-}
-.texto:focus, section div textarea:focus
-{border:1px solid rgba(115, 255, 0, 0.842);outline:none;}
-
-.texto::placeholder{color: rgba(189, 189, 189, 0.76);}
-.boton-enviar{width: 30%;}
 
 
 
 /* codigo bloque 2 */
 .Bloque2 {  
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px;
     background-color: hwb(220 0% 77%);
     height: auto;
     width: 100%; 
@@ -479,7 +423,79 @@ section div textarea
     box-sizing: border-box;
 } 
 
+/* formulario */
+section
+{
+    width: 100%; 
+    height: auto; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    /* background-color: #00000057; */
+}
+section div h4
+{color:white; font-size: xx-large; text-align: center;}
+section div label{color: rgb(255, 255, 255) ;}
+section div textarea
+{
+    height: 250px;
+    padding: 5px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: none;
+    color:  rgb(0, 20, 59);
+    background-color: white;
+    width: 100%;
+}
+.formulario
+{
+    width: 50%;
+    height: auto;
+    /* background-color: red; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+    
+}
 
+.texto
+{
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    color:  rgb(228, 228, 228);
+    /* background-color: rgba(191, 196, 195, 0.178); */
+    background-color: rgb(0, 20, 59);
+    height: auto;
+    width: 100%;
+   
+}
+.texto:focus, section div textarea:focus
+{border:1px solid rgba(0, 183, 255, 0.842);outline:none;}
+
+.texto::placeholder{color: rgba(189, 189, 189, 0.185);}
+.boton-enviar{width: 30%;}
+
+
+
+
+
+
+/* pie de pagina footer */
+footer
+{
+    height: 600px;
+    width: 100%;
+    background-color: #000122;
+}
 
 
 /* clases para la funcionalidad del boton */
@@ -525,7 +541,7 @@ section div textarea
         grid-template-rows: repeat(4, 1fr);
         gap: 10px;
     } 
-    .formulario{width: 100%;padding-left: 10px; padding-right: 10px;}
+    .formulario{width: 100%;padding-left: 20px; padding-right: 20px;}
 }
 
 /* Estilos para móviles medianos */
