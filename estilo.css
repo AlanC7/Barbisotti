@@ -19,7 +19,7 @@ main
     justify-content: center;
     /* gap: 20px; */
 }
-.Bloque1, .Bloque2, .bloque-carrusel, section{max-width: 1500px;}
+.Bloque1, .Bloque2, .bloque-carrusel, section, .contenedor-footer{max-width: 1500px;}
 /* Navegación */
 nav { 
     width:100%;
@@ -490,12 +490,76 @@ section div textarea
 
 
 /* pie de pagina footer */
-footer
-{
-    height: 600px;
+footer {
+    height: auto;
     width: 100%;
     background-color: #000122;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; /* Oculta cualquier desbordamiento */
 }
+
+.contenedor-footer {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px; /* Usa solo gap en lugar de grid-gap */
+    height: auto; /* Usa auto en lugar de 100% si es necesario */
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.contenedor-footer-logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    /* background-color: rgb(88, 185, 85); */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+
+.logo2 {
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.contenedor-footer-contenido {
+    margin: 10px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    width: auto;
+    height: auto;
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    /* background-color: blue; */
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 5px;
+    height: auto;
+    color: white;
+    text-align: center;
+    /* background-color: #383845; */
+}
+
+
+
+
 
 
 /* clases para la funcionalidad del boton */
@@ -542,6 +606,8 @@ footer
         gap: 10px;
     } 
     .formulario{width: 100%;padding-left: 20px; padding-right: 20px;}
+    .contenedor-footer-contenido{display: grid; grid-template-columns: 1fr;}
+    
 }
 
 /* Estilos para móviles medianos */
@@ -681,7 +747,7 @@ footer
         opacity: 0;
     }
 }
-.ocultarScroll { overflow:hidden;}
+.ocultarScroll { overflow:hidden;} 
 
 
 
