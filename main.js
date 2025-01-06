@@ -97,3 +97,49 @@ window.addEventListener('load',()=>
     });
   }
 
+
+  
+//   muestra un mensaje para el envio el formulario
+
+/*function mostrarMensaje(event) {
+    
+    var modal = document.getElementById("miModal");
+    modal.style.display = "flex";
+    setTimeout(cerrarModal, 1000); // Cierra el modal después de 3 segundos
+}
+
+function cerrarModal() {
+    var modal = document.getElementById("miModal");
+    modal.style.display = "none";
+}*/
+
+
+function enviarFormulario(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+    var form = event.target;
+    var formData = new FormData(form);
+
+    fetch('https://formsubmit.co/ajax/alan.castillo@utelvt.edu.ec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        mostrarMensaje();
+        form.reset(); // Resetea el formulario después de enviarlo
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+function mostrarMensaje() {
+    var modal = document.getElementById("miModal");
+    modal.style.display = "flex";
+    setTimeout(cerrarModal, 3000); // Cierra el modal después de 3 segundos
+}
+
+function cerrarModal() {
+    var modal = document.getElementById("miModal");
+    modal.style.display = "none";
+}
+
+

@@ -438,10 +438,10 @@ section
     border-radius: 20px;
     /* background-color: #00000057; */
 }
-section div h4
+section form h4
 {color:white; font-size: xx-large; text-align: center;}
-section div label{color: rgb(255, 255, 255) ;}
-section div textarea
+section form label{color: rgb(255, 255, 255) ;}
+section form textarea
 {
     height: 250px;
     padding: 5px;
@@ -478,16 +478,36 @@ section div textarea
     width: 100%;
    
 }
-.texto:focus, section div textarea:focus
+.texto:focus, section form textarea:focus
 {border:1px solid rgba(0, 183, 255, 0.842);outline:none;}
 
 .texto::placeholder{color: rgba(189, 189, 189, 0.185);}
 .boton-enviar{width: 30%;}
 
-
-
-
-
+/* modal ventana q se muestra */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+} 
+.modal-content {
+    background-color: #fefefe;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: auto;
+    max-width: 300px;
+    text-align: center;
+}
 
 /* pie de pagina footer */
 footer {
@@ -563,10 +583,11 @@ footer {
    font-size: xx-large;
 }
 hr{
+    
     color:white; 
     border: none; 
     height: 3px; 
-    background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4631578947368421) 70%, rgba(255,255,255,0) 100%);  
+    background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);  
     width: 100%; 
     border-radius: 20px;
     margin: 0
@@ -576,7 +597,7 @@ hr{
     color:white; 
     border: none; 
     height: 100%; 
-    background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4631578947368421) 70%, rgba(255,255,255,0) 100%); 
+    background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%); 
     width: 3px; 
     border-radius: 20px;
     margin: 0
@@ -635,13 +656,13 @@ hr{
     }
     .Bloquevid{ top: 68px; }
     .colegio {gap: 5px;}
-    .colegio>h5{font-size: 1.6vmin;}
-    .nombre-col{font-size: 3.3vmin;}
+    .colegio>h5{font-size: 1.9vmin;}
+    .nombre-col{font-size: 3.9vmin;}
     .parrafovid{font-size: 5px;}
     .titulo-bachillerato{font-size:9vw;}
     .educamos{gap: 1px;}
     nav{place-content: center; grid-template-columns: repeat(auto-fit,minmax(10px, 1fr)); padding: 5px; height: 80px;}
-    .logo { padding: 5px;max-width:5rem;height: auto;}
+    .logo { padding: 10px;max-width:5rem;height: auto;}
     .boton-menu{display: block; width: auto;  height:auto}
     .menu{display: none;} 
     .linea-vertical{display: none;}
@@ -676,14 +697,14 @@ hr{
     .contenedor-cartillas-bach{ max-width: 100%;}
     nav{place-content: center; grid-template-columns: 1fr 1fr 1fr;padding: 5px;height: 90px;}
     .contenedor-logo { max-width: 16vmin;}
-    .logo{max-width: 7rem;}
+    .logo{max-width: 7rem; padding: 8px;}
     .contenedor-menu{ justify-content: center;}
     .menu{display: none; flex-direction: column; position: relative; background-color: transparent; /*visibility: hidden;*/}
     .items{text-align: center;}
     .texvid{ font-size: 4vw; }
     .parrafovid{font-size: 10px;} 
-    .colegio>h5{font-size: 1.3vmin;}
-    .nombre-col{font-size: 2.6vmin;}
+    .colegio>h5{font-size: 1.8vmin;}
+    .nombre-col{font-size: 3.6vmin;}
     .boton-menu{display:block;}
     .titulo-bachillerato{font-size:8vw;}
     .contendedor-ilustracion{ grid-area: 2 / 1 / 3 / 5;}

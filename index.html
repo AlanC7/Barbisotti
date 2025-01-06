@@ -96,7 +96,7 @@
         <div class="Bloque1">
             <H2 class="titulo-bachillerato">Educación Básica</H2>
             <div class="contendedor-ilustracion">
-                <img class="ilustracion" src="recursos/imagenes/inicial.png" alt="" draggable="false">
+                <img class="ilustracion" src="recursos/imagenes/inicial.jpg" alt="" draggable="false">
             </div>
             <div class="contenedor-cartillas">
                 <div class="cartillas">
@@ -153,27 +153,36 @@
         </div>
       
         <section id="contacto">
-            <div class="formulario">
+            <form class="formulario" onsubmit="enviarFormulario(event)" action="https://formsubmit.co/alan.castillo@utelvt.edu.ec" method="POST">
                 <h4>Formulario de Contacto</h4>  
-
+            
                 <label for="nombre">Nombre</label>
-                <input id="nombre" class="texto" type="text" placeholder="Ingrese Nombre">
-
+                <input id="nombre" class="texto" type="text" name="nombre" placeholder="Ingrese Nombre" required>
+            
                 <label for="correo">Correo Electrónico</label>
-                <input id="correo" class="texto" type="email" placeholder="Ingrese Correo Electronico">
-
+                <input id="correo" class="texto" type="email" name="email" placeholder="Ingrese Correo Electrónico" required>
+            
                 <label for="numero">Número de teléfono</label>
-                <input id="numero" class="texto" type="number" placeholder="Ingrese Numero Celular">
-
+                <input id="numero" class="texto" type="number" name="numero" placeholder="Ingrese Número Celular" required>
+            
                 <label for="asunto">Asunto</label>
-                <input id="asunto" class="texto" type="text" maxlength="30" placeholder="Ingrese Asunto">
-
+                <input id="asunto" class="texto" type="text" name="asunto" maxlength="30" placeholder="Ingrese Asunto" required>
+            
                 <label for="mensaje">Deje su mensaje</label>
-                <textarea id="mensaje" class="" name="" maxlength="" placeholder="Ingrese Mensaje"></textarea>
-                <button class="btn btn-secondary boton-enviar">Enviar</button>
-    
-                
-            </div>   
+                <textarea id="mensaje" class="" name="mensaje" placeholder="Ingrese Mensaje" required></textarea>
+                <input type="submit" class="btn btn-warning boton-enviar" value="Enviar">
+            
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/Proyecto%20angel%20barbisotti/">
+                <input type="hidden" name="_captcha" value="false"> 
+            
+                <!-- Ventana modal -->
+                <div id="miModal" class="modal">
+                    <div class="modal-content">
+                        <p>¡Formulario enviado con éxito!</p>
+                    </div>
+                </div>
+            </form>
+         
         </section>
             
 
@@ -197,24 +206,24 @@
                     <h3>Colecturia</h3>
                     <div class="numero-tel">
                         <i class="bi bi-whatsapp"></i>
-                        <a href="#">0934584734</a>
+                        <a href="https://walink.co/d80d3f"  target="_blank">0968090191</a>
                     </div>
                     <hr>
                     <div class="numero-tel">
                         <i class="bi bi-whatsapp"></i>
-                        <a href="#">0934584734</a>
+                        <a href="https://walink.co/863abf" target="_blank">0985896975</a>
                     </div>
                     <hr>
                     <div class="numero-tel">
                         <i class="bi bi-whatsapp "></i>
-                        <a href="#">0934584734</a>
+                        <a href="https://walink.co/98ebec" target="_blank">0980352801</a>
                     </div>
                 </div>
                 <hr class="linea-vertical">
                 <div class="contenido">
                     <h3>hora de atención</h3>
                     <h5>Lunes a Viernes</h5>
-                    <h5>8:00 a 14:00</h5>
+                    <h5>7:00 a 16:00</h5>
                 </div>
             </div>
 
