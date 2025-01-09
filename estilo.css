@@ -7,7 +7,7 @@
     background-color:transparent;  
    
 }
-body{background-color:rgb(0, 76, 227) ;}
+body{ background-color:rgb(0, 76, 227); align-items: center; justify-content: center;}
 main
 {
     /* position: relative;
@@ -451,6 +451,7 @@ section form textarea
     color:  rgb(0, 20, 59);
     background-color: white;
     width: 100%;
+    resize: none;
 }
 .formulario
 {
@@ -481,7 +482,7 @@ section form textarea
 .texto:focus, section form textarea:focus
 {border:1px solid rgba(0, 183, 255, 0.842);outline:none;}
 
-.texto::placeholder{color: rgba(189, 189, 189, 0.185);}
+.texto::placeholder{color: rgba(189, 189, 189, 0.285);}
 .boton-enviar{width: 30%;}
 
 /* modal ventana q se muestra */
@@ -498,6 +499,7 @@ section form textarea
     place-content: center;
     justify-content: center;
     align-items: center;
+    transition: all 1s ease;
 } 
 .modal-content {
     background-color: #fefefe;
@@ -635,9 +637,18 @@ hr{
 
 /* clases para la funcionalidad del boton */
 
-.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 60%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; z-index: 101;}
-.visiblemenu{display:flex; flex-direction: column; position: relative; align-items: end; }
-.novisiblemenu{display: none; flex-direction: column; position: relative; align-items: end; z-index: 101;}
+.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 70%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; z-index: 101;}
+.visiblemenu{display:flex;  }
+.novisiblemenu{display: none; flex-direction: column;}
+
+
+
+
+
+
+/* estylo para pa pagina nosotros */
+
+
 
 
 

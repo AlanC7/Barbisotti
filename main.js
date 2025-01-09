@@ -142,4 +142,3 @@ function cerrarModal() {
     modal.style.display = "none";
 }
 
-

@@ -1,0 +1,230 @@
+
+
+.contenedor-principal
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; 
+    place-items: center;
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(209, 191, 173);
+    box-sizing: border-box;
+    padding-top: 120px;
+}
+
+.nombre-col1
+{
+    text-align: center;
+    color: rgb(0, 76, 227);
+}
+.nombre-col2
+{
+    color: rgb(0, 76, 227);
+    text-align: center;
+}
+.logo-nosotros
+{
+    padding: 10px;
+    width: 200px;
+    height: auto;
+    align-items: center;
+    /* background-color: rgb(88, 185, 85); */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.titulo
+{
+    text-align: center;
+}
+.parrafo
+{
+    text-align: justify;
+}
+
+.contenedor-nosotros
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto ; 
+    gap: 30px;
+    height: auto;
+    width: 70%;
+    /* background-color: rgb(167, 138, 101); */
+    padding: 10px;
+    box-sizing: border-box;
+}
+.divisiones
+{
+    background-color: rgba(255, 255, 255, 0.178);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.institucion
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor2
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto ; 
+}
+
+
+.contenedor2
+{
+    grid-template-columns: 1fr; 
+}
+
+.contenedor2 .parrafo
+{
+    padding-bottom: 30px;
+}
+.subtitulo
+{
+    text-align: left;
+}
+
+
+.elemento{text-align: justify;}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:300px) and (max-width: 480px) 
+{
+    .contenedor-principal{padding-top: 90px;}
+    .contenedor-nosotros
+    {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(1,minmax(200px,1fr));
+        grid-template-rows: auto auto; 
+        box-sizing: border-box;
+        min-width: 100%;
+    }
+    .contenedor2
+    {
+        grid-template-columns: 1fr; 
+    }
+    
+}
+
+/* Estilos para móviles medianos */
+@media (min-width: 481px) and (max-width: 767px) 
+{
+    .contenedor-principal{padding-top: 100px;}
+    .contenedor-nosotros
+    {
+        display: grid;
+        grid-template-columns: repeat(2,minmax(200px,1fr));
+        grid-template-rows: auto auto; 
+        box-sizing: border-box;
+        min-width: 100%;
+    }
+    .institucion
+    {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .contenedor2
+    {
+        grid-template-columns: 1fr; 
+    }
+    
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contenedor-nosotros
+    {
+        display: grid;
+        grid-template-columns: repeat(2,minmax(200px,1fr));
+        grid-template-rows: auto auto; 
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .institucion
+    {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .contenedor2
+    {
+        grid-template-columns: 1fr; 
+    }
+    
+}
+
+/* Estilos para pantallas de escritorio pequeñas */
+@media (min-width: 1025px) and (max-width: 1100px) {
+    .contenedor-nosotros
+    {
+        width: 85%;
+    }
+}
+
+/* Estilos para pantallas de escritorio grandes */
+@media (min-width: 1101px) and (max-width: 1900px){
+   
+   
+}
+
+
+
+/* cargar de pagina */
+.loader-container {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background-color:rgb(0, 76, 227); 
+    
+}
+.ripple {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+.ripple::before, .ripple::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    opacity: 0;
+    animation: ripple 3s infinite;
+}
+.ripple::after {
+    animation-delay: 1.5s;
+}
+@keyframes ripple {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+.ocultarScroll { overflow:hidden;} 
