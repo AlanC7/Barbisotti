@@ -633,6 +633,31 @@ hr{
 }
 
 
+.contenedor-mapa
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+.mapa
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
 
 
 /* clases para la funcionalidad del boton */
