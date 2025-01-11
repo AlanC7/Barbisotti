@@ -632,7 +632,7 @@ hr{
     font-weight:bold;
 }
 
-
+/* integracion de un mapa */
 .contenedor-mapa
 {
     display: flex;
@@ -641,8 +641,7 @@ hr{
     justify-content: center;
     /* background-color: red; */
     padding: 10px;
-    box-sizing: border-box;
-
+    padding-bottom: 20px;
 }
 .mapa
 {
