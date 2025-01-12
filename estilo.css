@@ -5,7 +5,7 @@
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     background-color:transparent;  
-   
+    
 }
 body{ background-color:rgb(0, 76, 227); align-items: center; justify-content: center;}
 main
@@ -27,7 +27,8 @@ nav {
     z-index: 100;
     height: 100px;
     padding: 10px;
-    background-color:rgb(219, 219, 219);  
+    /* background-color:rgb(219, 219, 219);  original */ 
+    background-color:rgb(255, 255, 255);  
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     /* grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)); */
@@ -111,12 +112,11 @@ nav {
 }
 
 .items {
+    text-decoration: none;
     position: relative;
     color: rgb(92, 92, 92);
-    text-decoration: none;
     transition: color 0.5s ease-in-out;
     background-color:transparent; 
-    
 }
 
 .menu .menu-items .items:hover {
@@ -174,7 +174,7 @@ nav {
     height: 35px;
     width: 100px;
     font-size: large;
-    background-color: hwb(220 0% 11%);
+    background-color: rgb(0, 76, 227);
     color: white;
     border-style: none;
     border-radius: 7px;
@@ -325,7 +325,7 @@ nav {
 /* codigo bloque 2 */
 .Bloque2 {  
     border-radius: 20px;
-    background-color: hwb(220 0% 77%);
+    background-color: rgb(0, 20, 59);
     height: auto;
     width: 100%; 
     padding-top: 50px;
@@ -371,7 +371,17 @@ nav {
     justify-content: space-between;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     
-} 
+}  
+.informatica
+{
+    /* background-image: url(recursos/imagenes/informatica.gif); */
+    /* mix-blend-mode:lighten; */
+    mix-blend-mode: lighten; 
+    background-size: cover; 
+    background-position: center;
+}
+.img-inf{ mix-blend-mode:lighten;  }
+
 .cartillas-bach:hover
 {
     transition: all 1s ease;
@@ -412,7 +422,7 @@ nav {
 }
 .imagen-bach
 {
-    /* background-color: red;   */
+    background-color:transparent; 
     flex: 0 1 auto; 
     height: 150px;
     width: 100%;
@@ -580,9 +590,11 @@ footer {
     /* background-color: #383845; */
 }
 .contenido h5{font-size:medium;}
-.contenido h3
+.nombrecol-footer{font-size: xx-large;}
+.contenedor-footer-contenido .contenido h3
 {
-   font-size: xx-large;
+    color:rgb(255, 237, 0);
+    font-size: xx-large;
 }
 hr{
     
@@ -608,6 +620,7 @@ hr{
 .numero-tel
 {
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
@@ -618,18 +631,32 @@ hr{
 }
 .numero-tel i
 {
-    color:rgb(37, 211, 102); 
+    color:rgb(167, 170, 168); 
     font-size: 30px;
+    transition: all .7s ease;
 }
-.contenedor-footer-contenido .contenido a
+/* .numero-tel a:hover
+{
+    color:rgb(37, 211, 102); 
+   
+} */
+.numero-tel a
 {
     color: white;
     text-decoration: none;
     padding: 10px;
+    transition: all .7s ease;
 }
-.contenedor-footer-contenido .contenido a:hover
+
+.numero-tel a:hover 
 {
-    font-weight:bold;
+    color:rgb(37, 211, 102); 
+    /* font-weight:bold; */
+    transform: translateX(10px);
+}
+.numero-tel a:hover ~ i
+{
+    color:rgb(37, 211, 102); 
 }
 
 /* integracion de un mapa */
