@@ -38,7 +38,7 @@ nav {
     justify-items: center; 
     place-content: center;
     box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 .contenedor-logo {
     width: 75px;
@@ -499,14 +499,25 @@ section form textarea
     border-radius: 5px;
     border: none;
     color:  rgb(228, 228, 228);
-    /* background-color: rgba(191, 196, 195, 0.178); */
-    background-color: rgb(0, 20, 59);
+    background-color: rgba(0, 20, 59, 0.534);
     height: auto;
     width: 100%;
-   
+    border-bottom: 1px solid white;   
+    transition: all 1s ease-in-out;
+}
+textarea
+{
+    background-color: rgba(0, 20, 59, 0.534);
+    transition: all 1s ease-in-out;
+    border: 1 solid white;
+    
 }
 .texto:focus, section form textarea:focus
-{border:1px solid rgba(0, 183, 255, 0.842);outline:none;}
+{
+    color:  rgba(0, 20, 59);
+    outline:none;
+    background-color: rgba(255, 255, 255, 0.493);
+}
 
 .texto::placeholder{color: rgba(189, 189, 189, 0.285);}
 .boton-enviar{width: 30%;}
@@ -561,15 +572,14 @@ footer {
 }
 
 .contenedor-footer-logo {
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    /* background-color: rgb(88, 185, 85); */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
+
 }
 
 
@@ -577,32 +587,31 @@ footer {
     background-color: white;
     border-radius: 50%;
     border: none;
-    padding: 10px;
+    padding: 5px;
     width: 165px;
     height: auto;
     object-fit: contain;
 }
 
 .contenedor-footer-contenido {
-    margin: 10px;
     color: white;
     display: grid;
     grid-template-columns: 2fr 10px 2fr;
     grid-template-rows: auto;
     width: auto;
     height: auto;
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-    /* background-color: blue; */
+    border-radius: 20px;
+    background-color: rgb(16, 16, 34);
+    
 }
 
 .contenido {
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    padding: 5px;
     height: auto;
     color: white;
     text-align: center;
+    margin:5px;
     /* background-color: #383845; */
 }
 .contenido h5{font-size:medium;}
@@ -620,7 +629,7 @@ hr{
     background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);  
     width: 100%; 
     border-radius: 20px;
-    margin: 0
+    margin: 0px;
 }
 .linea-vertical
 {
@@ -630,20 +639,15 @@ hr{
     background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%); 
     width: 3px; 
     border-radius: 20px;
-    margin: 0
-
 }
 .numero-tel
 {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
-    margin: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 .numero-tel i
 {
