@@ -145,6 +145,20 @@ nav {
     background-color:rgb(251, 255, 10);
     
 }
+.bt-aulavirtual
+{
+    padding: 6px;
+    border-radius: 10px;
+    background-color:rgb(6, 2, 253); 
+    color:white;
+    border-style: none;
+    transition: all .7 ease-in-out;
+}
+.bt-aulavirtual:hover
+{
+    color:rgb(7, 4, 145); 
+    background-color:rgb(251, 255, 10); 
+}
 
 /* Contenedor después del menú */
 .Bloquevid {   
@@ -379,7 +393,7 @@ nav {
     
     /* background: linear-gradient( rgba(0, 20, 59,1) 0%, rgba(16, 96, 255,1)80%);  */ 
     /* border: 1px solid  rgba(16, 96, 255,1); */
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     backdrop-filter: blur(20px); 
     width:100%;
     height: 100%;
@@ -711,6 +725,7 @@ hr{
 .visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 70%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; z-index: 101;}
 .visiblemenu{display:flex;  }
 .novisiblemenu{display: none; flex-direction: column;}
+
 
 
 
