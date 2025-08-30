@@ -121,10 +121,12 @@ nav {
     color:rgb(0, 76, 227);
     transition: color 0.5s ease-in-out;
     background-color:transparent; 
+    padding: 5px;
 }
 
 .menu .menu-items .items:hover {
-    color: rgb(251, 255, 10);
+    /* color: rgb(251, 255, 10); */
+    
     border-bottom: 10px;
 }
 
@@ -134,29 +136,32 @@ nav {
     left: 0;
     bottom: -10px;
     height: 6px;
-    width: 0%;
+    width: 100%;
     position: absolute;
-    border-radius: 3px;
-    transition: width 0.7s ease-in-out;
+    background-color: rgb(251, 255, 10);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.7s ease-in-out, background-color 0.7s;
 }
 
 .menu .menu-items .items:hover::after {
-    width: 100%;
-    background-color:rgb(251, 255, 10);
-    
+    transform: scaleX(1);
+    background-color: rgb(251, 255, 10);
 }
 .bt-aulavirtual
 {
     padding: 6px;
     border-radius: 10px;
-    background-color:rgb(6, 2, 253); 
+    background-color:rgb(2, 90, 253); 
     color:white;
     border-style: none;
-    transition: all .7 ease-in-out;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.514);
+    transition: background-color .7s ease-in-out;
 }
 .bt-aulavirtual:hover
 {
-    color:rgb(7, 4, 145); 
+    color:rgb(0, 76, 227);
     background-color:rgb(251, 255, 10); 
 }
 
@@ -593,16 +598,15 @@ footer {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-
+    
 }
-
 
 .logo2 {
     background-color: white;
     border-radius: 50%;
     border: none;
     padding: 5px;
-    width: 165px;
+    width: 100px;
     height: auto;
     object-fit: contain;
 }
@@ -669,11 +673,6 @@ hr{
     font-size: 30px;
     transition: all .7s ease;
 }
-/* .numero-tel a:hover
-{
-    color:rgb(37, 211, 102); 
-   
-} */
 .numero-tel a
 {
     color: white;
@@ -720,9 +719,9 @@ hr{
 
 
 
-/* clases para la funcionalidad del boton */
+/* clases para la funcionalidad del boton que cierra el modal */
 
-.visiblecontenedor{position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 70%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; z-index: 101;}
+.visiblecontenedor{color:white; position:fixed; top: 0; right: 0;background-color: rgba(0, 0, 0, 0.911);height: 100vh; bottom: 0; width: 70%; box-shadow:0 0 0 100vmax rgba(0, 0, 0, 0.5);display: flex; z-index: 101;}
 .visiblemenu{display:flex;  }
 .novisiblemenu{display: none; flex-direction: column;}
 
