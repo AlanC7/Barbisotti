@@ -626,12 +626,18 @@ footer {
     align-items: center;
     
 }
-
-.logo2 {
-    background-color: white;
+.contlogo2
+{
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    height: auto;
     border-radius: 50%;
-    border: none;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+  
+}
+.logo2 {
+    margin: 30px 30px 20px 30px;
     width: 100px;
     height: auto;
     object-fit: contain;
@@ -656,7 +662,7 @@ footer {
     color: white;
     text-align: center;
     margin:5px;
-    /* background-color: #383845; */
+    /* background-color: #383845;  */
 }
 .contenido h5{font-size:medium;}
 .nombrecol-footer{font-size: xx-large;}
