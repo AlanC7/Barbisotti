@@ -2,7 +2,7 @@
 {
     margin: 0; 
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     background-color:transparent;  
     
@@ -285,7 +285,7 @@ nav {
 {
     object-fit: cover; 
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 100%;
     box-shadow: -10px 10px 20px 5px rgb(6, 5, 53);
     border: 4px solid rgba(255, 255, 255, 0.171);
@@ -313,7 +313,7 @@ nav {
     height:100%;
     display: flex;
     flex-direction: column;
-    border-radius: 40px;
+    border-radius: 10px;
     gap: 5px;
     padding: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
@@ -339,6 +339,7 @@ nav {
     color: rgba(251, 255, 10,1); 
     font-weight:bold;
     font-size:x-large;
+    text-align: left;
    
 }
 .parrafo-cartillas
@@ -461,7 +462,7 @@ nav {
 .cartillas-bach:hover .titulo-cartillas-bach
 {
     
-    color: rgb(251, 255, 10); 
+    /* color: rgb(251, 255, 10);  */
     transition: all 1s ease;
 } 
 .parrafo-cartillas-bach
