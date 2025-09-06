@@ -58,9 +58,6 @@
     justify-content: center;
 }
 
-img.loaded {
-  opacity: 1;
-} 
 .photo-gallery .item {
     padding: 0;
     height: 140px;
@@ -87,7 +84,7 @@ img.loaded {
     height:100%;
     border-radius:20px;   
     transition: all 0.7s ease-in-out;
-    opacity: 0;
+    
 }
   .img-fluid:hover
 {
