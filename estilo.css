@@ -398,6 +398,15 @@ nav {
     padding-left: 20px;
     padding-right: 20px;
 }
+.contvideo-bach
+{
+    margin-top: 20px;
+}
+.video-bach
+{
+    width: 80%;
+
+}
 
 /* .informatica:hover
 {
@@ -795,6 +804,7 @@ hr{
     .cartillas{border-radius: 20px; padding:10px;}
     .contendedor-ilustracion{ grid-area: 2 / 1 / 3 / 5;padding: 10px;}
     .cartillas-bach{height: 400px; padding: 1px;}
+    .video-bach{width: 90%;}
     .parrafo-cartillas-bach{font-size: small;}
     .contenedor-cartillas
     {
@@ -838,6 +848,7 @@ hr{
     .cartillas{height: 90%; width: 90%;}
     .cartillas-bach{height: 100%;  }
     .parrafo-cartillas-bach{font-size:small;}
+    .video-bach{width: 90%;}
     .parrafo-cartillas{font-size: small;}
     .conte-img{height: 120px;}
     .cartillas
@@ -864,6 +875,7 @@ hr{
     .boton-menu{display:block;}
     .titulo-bachillerato{font-size:7vw;}
     .cartillas-bach{height:100%;}
+    .video-bach{width: 90%;}
     .parrafo-cartillas-bach{font-size: 13px;}
     .conte-img{height: 120px;}
     .contenedor-cartillas
