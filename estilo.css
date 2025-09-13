@@ -189,12 +189,11 @@ nav {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 5px;
     z-index: 1;
     width:  70%;
-    /* background-color: red; */
+    /* background-color: red;  */
 }
 
 .botoncupo {
@@ -216,15 +215,59 @@ nav {
 }
 
 .texvid {
+    height: 60px;
     color: white;
     font-size: 4vw;
     font-weight: bold;
     text-align: center;
+    height: auto;
     background-color: #004be25e;
     padding: 7px;
-    border-radius: 10px;
+    border-right:  4px  solid rgb(251, 255, 10);
+    animation: mostrar .2s infinite step-end alternate;
+   
 }
 
+.texvid::before
+{
+    content: "E"; 
+    animation: anitexto 10s infinite ease-in-out;
+}
+@keyframes anitexto {
+  0%   { content: "E"; }
+  2%   { content: "Ed"; }
+  4%  { content: "Edu"; }
+  6%  { content: "Educ"; }
+  8%  { content: "Educa"; }
+  10%  { content: "Educam"; }
+  12%  { content: "Educamo"; }
+  14%  { content: "Educamos"; }
+  16%  { content: "Educamos "; }
+  18%  { content: "Educamos p"; }
+  20%  { content: "Educamos pa"; }
+  22%  { content: "Educamos par"; }
+  24%  { content: "Educamos para"; }
+  26%  { content: "Educamos para "; }
+  28%  { content: "Educamos para l"; }
+  30%  { content: "Educamos para la"; }
+  32%  { content: "Educamos para la "; }
+  34%  { content: "Educamos para la v"; }
+  36%  { content: "Educamos para la vi"; }
+  38%  { content: "Educamos para la vid"; }
+  40% { content: "Educamos para la vida"; }
+
+  90%{content:"Educamos para la vida";}
+  93%{content:"Educamos para";}
+  96%{content:"Educamos ";}
+  99%{content:"E";}
+}
+@keyframes mostrar
+{
+     0% { opacity: 1; }
+    50%{border-color: transparent;}
+  100% { opacity: 0; }
+
+}
 .parrafovid 
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
